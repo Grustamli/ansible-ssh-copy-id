@@ -1,3 +1,0 @@
-copy_ssh_user: "{{ ansible_user }}"
-ssh_public_key: "{{ lookup('env','HOME')  }}/.ssh/id_rsa.pub"
-ssh_port: "{{ ansible_port|quote }}"
