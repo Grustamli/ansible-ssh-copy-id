@@ -5,4 +5,7 @@
     password: "{{ password }}"
     ssh_public_key: "{{ ssh_public_key }}"
     ssh_port: "{{ ssh_port }}"
+  loop: "{{ copy_ssh_remote_hosts }}"
+  loop_control:
+    loop_var: hostname
 
