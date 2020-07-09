@@ -1,9 +1,8 @@
 - name: Inject SSH Key to remote hosts
   ssh_copy_id:
-    hostname: "{{ item }}"
+    hostname: "{{ hostname }}"
     username: "{{ copy_ssh_user }}"
     password: "{{ copy_ssh_password }}"
     ssh_public_key: "{{ ssh_public_key }}"
     ssh_port: "{{ ssh_port }}"
-  loop: "{{ copy_ssh_remote_hosts }}"
 
