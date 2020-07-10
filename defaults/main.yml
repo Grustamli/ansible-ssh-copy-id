@@ -1,1 +1,5 @@
-username: "{{ ansible_user }}" 
+username: "{{ ansible_user }}"
+password: "{{ ssh_password }}"
+copy_ssh_remote_hosts: "{{ play_hosts }}"
+ssh_public_key: "{{ lookup('pipe', 'echo $HOME') }}/.ssh/id_rsa.pub"
+ssh_port: "{{ ansible_port|default(22) }}"
